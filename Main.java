@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        fibonacciSet(5);
+        fibonacciSet(25);
 
 
     }
@@ -12,6 +12,7 @@ public class Main {
         int x = 1;
         int y = 1;
         int z = 1;
+        int empty = 0;
         int i = 0;
 
         /*
@@ -23,10 +24,19 @@ public class Main {
         for(i = 0; i < runTimes; i++){
             z = x + y;
             System.out.println(z);
+            empty = z;
+            z = x;
+            x = y;
+            y = empty;
+
+
+
+            /*
             y = z + x;
             System.out.println(y);
             x = y + z;
             System.out.println(x);
+            */
         }
 
 
